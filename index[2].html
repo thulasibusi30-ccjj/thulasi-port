@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="B. Thulasi | Computer Science & Engineering Student | Aspiring Software Developer">
+<title>B. Thulasi | Software Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b14;--card:#0d1422;--card2:#101a2c;--text:#eef5ff;--muted:#94a3b8;--line:#1d2a40;--blue:#4da3ff;--cyan:#62e6ff;--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 80% 10%,rgba(77,163,255,.13),transparent 28%),radial-gradient(circle at 10% 40%,rgba(98,230,255,.07),transparent 25%);z-index:-2}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:55px 55px;z-index:-1}
+a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(7,11,20,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navbar{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.35rem;font-weight:800;letter-spacing:.08em}.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:28px;list-style:none}.navlinks a{color:#b9c6d8;font-size:.9rem;transition:.25s}.navlinks a:hover,.navlinks a.active{color:white}
+.menu{display:none;background:none;border:0;color:white;font-size:1.6rem}
+section{padding:100px 0;scroll-margin-top:70px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px;padding-top:130px}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #234467;border-radius:30px;background:rgba(77,163,255,.08);color:#a9d7ff;font-size:.78rem;margin-bottom:22px}
+.dot{width:7px;height:7px;background:#53d69b;border-radius:50%;box-shadow:0 0 12px #53d69b}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:1.02;letter-spacing:-.055em;margin-bottom:14px}
+.gradient{background:linear-gradient(90deg,#fff,#72c9ff);-webkit-background-clip:text;color:transparent}
+.role{font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;color:#a9d7ff;margin-bottom:18px}
+.hero p{max-width:680px;color:var(--muted);font-size:1.02rem}
+.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:12px 19px;border-radius:9px;border:1px solid var(--line);font-weight:600;font-size:.9rem;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:linear-gradient(135deg,#3188e8,#54c9ff);color:#04101f;border:0}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(77,163,255,.16)}
+.hero-card{position:relative}
+.code-card{background:linear-gradient(145deg,rgba(16,26,44,.95),rgba(9,15,26,.95));border:1px solid #243650;border-radius:20px;padding:25px;box-shadow:0 30px 90px rgba(0,0,0,.35);transform:rotate(1.5deg)}
+.window{display:flex;gap:7px;margin-bottom:25px}.window i{width:9px;height:9px;border-radius:50%;background:#536174}
+.code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem;color:#b7c8dc}.blue{color:#63c6ff}.green{color:#72e1a5}.purple{color:#c7a8ff}.orange{color:#ffbd78}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.tag{padding:5px 9px;border-radius:6px;background:#142238;color:#a9c9e8;font-size:.72rem;border:1px solid #203652}
+.section-head{margin-bottom:42px}.eyebrow{color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.035em;margin-top:5px}.section-head p{color:var(--muted);max-width:650px}
+.about{display:grid;grid-template-columns:1fr 360px;gap:55px;align-items:start}.about p{color:var(--muted);margin-bottom:16px}
+.info-card,.skill-card,.project,.cert,.contact-card{background:rgba(13,20,34,.8);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.3s}
+.info-card:hover,.skill-card:hover,.project:hover,.cert:hover{transform:translateY(-5px);border-color:#31547a}
+.info-row{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.9rem}.info-row:last-child{border:0}.info-row span:first-child{color:var(--muted)}.info-row span:last-child{text-align:right;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:35px}.stat{padding:22px;border:1px solid var(--line);background:#0b1220;border-radius:12px}.stat strong{display:block;font-size:1.5rem;color:#bce4ff}.stat span{color:var(--muted);font-size:.75rem}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.skill-card h3{margin-bottom:14px;font-size:1rem}.skill-list{display:flex;flex-wrap:wrap;gap:8px}.skill{padding:8px 11px;background:#111d30;border:1px solid #20334d;border-radius:8px;color:#c8d7e9;font-size:.82rem}
+.project.featured{display:grid;grid-template-columns:1fr 300px;gap:35px;padding:32px}.project h3{font-size:1.5rem;margin:8px 0}.project p{color:var(--muted);max-width:700px}.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.project-side{border-left:1px solid var(--line);padding-left:25px;display:flex;flex-direction:column;justify-content:center;gap:12px}.project-side strong{font-size:1.4rem}.project-side span{color:var(--muted);font-size:.82rem}
+.timeline{position:relative;max-width:850px;margin:auto}.timeline:before{content:"";position:absolute;left:9px;top:5px;bottom:5px;width:1px;background:#28415f}.edu{position:relative;padding-left:45px;margin-bottom:35px}.edu:before{content:"";position:absolute;left:4px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 15px rgba(77,163,255,.7)}.edu h3{font-size:1.15rem}.edu .school{color:#a9d7ff;font-weight:600}.edu .date{color:var(--muted);font-size:.8rem}.edu p{color:var(--muted);margin-top:5px}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cert h3{margin:8px 0 2px}.cert p{color:var(--muted);font-size:.88rem}.cert small{color:var(--blue)}
+.soft{display:flex;flex-wrap:wrap;gap:12px}.soft span{padding:12px 17px;border:1px solid var(--line);border-radius:10px;background:#0d1625;color:#cbd8e8}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px}.contact-card h3{font-size:1.25rem;margin-bottom:15px}.contact-item{padding:13px 0;border-bottom:1px solid var(--line)}.contact-item:last-child{border:0}.contact-item small{display:block;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}.contact-item a{color:#b8dcff}
+form{display:grid;gap:13px}input,textarea{width:100%;background:#0a111e;border:1px solid var(--line);border-radius:9px;padding:13px 14px;color:white;font:inherit;outline:none}input:focus,textarea:focus{border-color:#3c75a8;box-shadow:0 0 0 3px rgba(77,163,255,.08)}textarea{min-height:145px;resize:vertical}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}.socials{display:flex;gap:18px}.socials a:hover{color:white}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:72px;left:0;width:100%;padding:20px;background:#080e19;border-bottom:1px solid var(--line);flex-direction:column;gap:17px}.navlinks.open{display:flex}.menu{display:block}.hero,.about,.contact,.project.featured{grid-template-columns:1fr}.hero{padding-top:120px}.project-side{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){section{padding:75px 0}.hero{gap:35px}.code-card{transform:none}.skills-grid,.cert-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.stats .stat{padding:16px}.footer-inner{flex-direction:column}h1{font-size:3.3rem}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container navbar">
+<a href="#home" class="logo">THULA<span>SI.</span></a>
+<button class="menu" aria-label="Open menu">☰</button>
+<ul class="navlinks">
+<li><a class="active" href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<main>
+<section id="home">
+<div class="container hero reveal">
+<div>
+<div class="badge"><span class="dot"></span> Open to Software Development Opportunities</div>
+<h1>B. <span class="gradient">Thulasi</span></h1>
+<div class="role"><span id="typing">Aspiring Software Developer</span></div>
+<p>Computer Science & Engineering student with a strong foundation in C, Python, Java and web technologies. Passionate about software development, problem solving and building practical applications.</p>
+<div class="buttons">
+<a class="btn primary" href="#projects">View Projects →</a>
+<a class="btn" href="resume.pdf" download>Download Resume ↓</a>
+<a class="btn" href="#contact">Let's Connect</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="code-card">
+<div class="window"><i></i><i></i><i></i></div>
+<div class="code">
+<span class="purple">class</span> <span class="blue">Developer</span> {<br><br>
+&nbsp;&nbsp;<span class="orange">String</span> name = <span class="green">"Thulasi"</span>;<br>
+&nbsp;&nbsp;<span class="orange">String</span> focus = <span class="green">"Software Development"</span>;<br>
+&nbsp;&nbsp;<span class="orange">String</span> mindset = <span class="green">"Learn • Build • Grow"</span>;<br><br>
+&nbsp;&nbsp;<span class="purple">void</span> <span class="blue">build</span>() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;solveProblems();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;keepLearning();<br>
+&nbsp;&nbsp;}<br>
+}
+</div>
+<div class="stack"><span class="tag">C</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">01 — About</span><h2>About Me</h2><p>A developer focused on learning, building and growing.</p></div>
+<div class="about">
+<div>
+<p>I am B. Thulasi, a Computer Science and Engineering student with a strong interest in software development. I have developed a foundation in C, Python and Java along with knowledge of Data Structures, Object-Oriented Programming, HTML, CSS and JavaScript.</p>
+<p>I enjoy solving programming problems, exploring new technologies and developing practical applications. My goal is to continuously strengthen my technical skills and become an industry-ready software developer.</p>
+<div class="stats"><div class="stat"><strong>8.01</strong><span>CGPA</span></div><div class="stat"><strong>964/1000</strong><span>Intermediate</span></div><div class="stat"><strong>555/600</strong><span>Class X</span></div><div class="stat"><strong>2</strong><span>Certifications</span></div></div>
+</div>
+<div class="info-card">
+<div class="info-row"><span>Education</span><span>B.Tech CSE</span></div>
+<div class="info-row"><span>University</span><span>Vignan's</span></div>
+<div class="info-row"><span>Status</span><span>Student</span></div>
+<div class="info-row"><span>Goal</span><span>Software Developer</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">02 — Skills</span><h2>Technical Skills</h2><p>Core technologies and concepts I am developing my expertise in.</p></div>
+<div class="skills-grid">
+<div class="skill-card"><h3>Programming Languages</h3><div class="skill-list"><span class="skill">C</span><span class="skill">Python</span><span class="skill">Java</span></div></div>
+<div class="skill-card"><h3>Web Technologies</h3><div class="skill-list"><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span></div></div>
+<div class="skill-card"><h3>Computer Science</h3><div class="skill-list"><span class="skill">Data Structures</span><span class="skill">Object-Oriented Programming</span></div></div>
+<div class="skill-card"><h3>Tools & Platforms</h3><div class="skill-list"><span class="skill">GitHub</span><span class="skill">Cisco</span><span class="skill">CodeChef</span><span class="skill">LeetCode</span><span class="skill">GeeksforGeeks</span></div></div>
+<div class="skill-card" style="grid-column:1/-1"><h3>Productivity Tools</h3><div class="skill-list"><span class="skill">MS Excel</span><span class="skill">MS Word</span><span class="skill">MS PowerPoint</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">03 — Projects</span><h2>Featured Project</h2><p>Practical application of programming and problem-solving skills.</p></div>
+<div class="project featured">
+<div><span class="eyebrow">Software Application</span><h3>Hospital Management System</h3><p>A software project focused on organizing and managing hospital-related information and operations through a structured application.</p><div class="project-meta"><span class="tag">Programming</span><span class="tag">Problem Solving</span><span class="tag">Application Development</span></div><a class="btn primary" href="#contact">Discuss Project →</a></div>
+<div class="project-side"><span>PROJECT</span><strong>01</strong><span>Hospital Management</span><span>Project details and repository link can be added here.</span></div>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">04 — Education</span><h2>Education</h2></div>
+<div class="timeline">
+<div class="edu"><h3>B.Tech — Computer Science & Engineering</h3><div class="school">Vignan's Foundation for Science, Technology and Research</div><div class="date">August 2024 – May 2028</div><p><strong>CGPA: 8.01</strong></p></div>
+<div class="edu"><h3>Intermediate</h3><div class="school">Sri Chaitanya Junior College</div><div class="date">July 2022 – March 2024</div><p><strong>Score: 964 / 1000</strong></p></div>
+<div class="edu"><h3>Class X</h3><div class="school">ZPH School</div><div class="date">June 2021 – May 2022</div><p><strong>Score: 555 / 600</strong></p></div>
+</div>
+</div>
+</section>
+
+<section id="certifications">
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">05 — Certifications</span><h2>Certifications</h2></div>
+<div class="cert-grid">
+<div class="cert"><small>CISCO</small><h3>JavaScript Essentials</h3><p>Certification demonstrating foundational knowledge of JavaScript concepts.</p></div>
+<div class="cert"><small>UNSTOP</small><h3>MERN Full Stack</h3><p>Full-stack development certification covering the MERN ecosystem.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">06 — Strengths</span><h2>Professional Skills</h2></div>
+<div class="soft"><span>Communication</span><span>Teamwork</span><span>Problem Solving</span><span>Adaptability</span><span>Leadership</span></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container reveal">
+<div class="section-head"><span class="eyebrow">07 — Contact</span><h2>Let's Connect</h2><p>Interested in an opportunity or want to discuss a project? Send a message.</p></div>
+<div class="contact">
+<div class="contact-card">
+<h3>Contact Information</h3>
+<div class="contact-item"><small>Email</small><a href="mailto:thulasibusi30@gmail.com">thulasibusi30@gmail.com</a></div>
+<div class="contact-item"><small>Phone</small><a href="tel:+917569821725">+91 7569821725</a></div>
+<div class="contact-item"><small>Location</small><span>Pedagarlapadu, 522437</span></div>
+</div>
+<div class="contact-card">
+<form onsubmit="sendMessage(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Subject" required>
+<textarea placeholder="Your Message" required></textarea>
+<button class="btn primary" type="submit">Send Message →</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-inner">
+<div>© 2026 B. Thulasi. Built with code, curiosity and continuous learning.</div>
+<div class="socials"><a href="mailto:thulasibusi30@gmail.com">Email</a><a href="#home">Back to top ↑</a></div>
+</div>
+</footer>
+
+<script>
+const menu=document.querySelector('.menu'),links=document.querySelector('.navlinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const roles=['Aspiring Software Developer','Java & Python Programmer','Full Stack Enthusiast','Problem Solver'];
+let ri=0,ci=0,del=false;
+const typing=document.getElementById('typing');
+function type(){const word=roles[ri];typing.textContent=word.slice(0,ci);if(!del&&ci<word.length){ci++;setTimeout(type,65)}else if(!del){del=true;setTimeout(type,1200)}else if(ci>0){ci--;setTimeout(type,35)}else{del=false;ri=(ri+1)%roles.length;setTimeout(type,250)}}
+type();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+const sections=[...document.querySelectorAll('section[id]')],navA=[...document.querySelectorAll('.navlinks a')];
+window.addEventListener('scroll',()=>{let current='home';sections.forEach(s=>{if(scrollY>=s.offsetTop-160)current=s.id});navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))});
+function sendMessage(e){e.preventDefault();alert('Thank you! Your message form is ready to connect to an email service or backend.');e.target.reset()}
+</script>
+</body>
+</html>
